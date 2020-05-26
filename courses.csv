@@ -1,0 +1,30 @@
+Sources,Targets,Weights,Color
+Math-101,CIS 150. Visual Computer Programming for Business,5,Yellow
+CMPS-101,CIS 231. Management Information Systems,5,Yellow
+OIS-200,CIS 231. Management Information Systems,5,Yellow
+CIS 150. Visual Computer Programming for Business,CIS 255. Programming for Business Applications,10,Red
+CIS 231. Management Information Systems,CIS 310. Data Communications,10,Red
+CIS 150. Visual Computer Programming for Business,CIS 310. Data Communications,10,Red
+CIS 310. Data Communications,CIS 315. Advanced Networking and Telecommunications,10,Red
+CIS 231. Management Information Systems,CIS 320. Applied Database Development,10,Red
+CIS 320. Applied Database Development,CIS 330. Systems Analysis and Design,10,Red
+CIS 231. Management Information Systems,CIS 340. Electronic Commerce: Business Uses of the Internet,10,Red
+MNGT-301,CIS 340. Electronic Commerce: Business Uses of the Internet,5,Yellow
+MKTG-300,CIS 340. Electronic Commerce: Business Uses of the Internet,5,Yellow
+CIS 150. Visual Computer Programming for Business,CIS 355. Advanced Programming and Data Structures,10,Red
+QBA-283,CIS 370. Data Analytics,5,Yellow
+QBA-282,QBA-283,5,Yellow
+Senior Standing & Department Permission,CIS 400. Internship in Computer Information Systems.,5,Yellow
+Department Permission,CIS 410. Special Topics,5,Yellow
+CIS 231. Management Information Systems,CIS 420. Integrative Project Management,10,Red
+Senior Standing,CIS 420. Integrative Project Management,5,Yellow
+CIS 330. Systems Analysis and Design,CIS 430. Information Technology Service Management,10,Red
+CIS 320. Applied Database Development,CIS 435. Data Warehousing and Business Intelligence,10,Red
+CIS 255. Programming for Business Applications,CIS 455. Integrated Web Development and e-Business,10,Red
+CIS 320. Applied Database Development,CIS 455. Integrated Web Development and e-Business,10,Red
+MNGT-301,CIS 460. Management of Information Systems,5,Yellow
+CIS 231. Management Information Systems,CIS 460. Management of Information Systems,10,Red
+CIS 231. Management Information Systems,CIS 480. Practical Business Information Processing,10,Red
+Department Permission,CIS 485. Special Problems in Business Information Processing,5,Yellow
+Senior Standing & Department Permission,CIS 490. Independent Study in Information Systems,5,Yellow
+Admission to the MBA program,CIS 501. Information Systems for Managers,5,Yellow
