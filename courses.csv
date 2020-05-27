@@ -14,7 +14,7 @@ MKTG-300,CIS 340. Electronic Commerce: Business Uses of the Internet,5,Yellow
 CIS 150. Visual Computer Programming for Business,CIS 355. Advanced Programming and Data Structures,10,Red
 QBA-283,CIS 370. Data Analytics,5,Yellow
 QBA-282,QBA-283,5,Yellow
-Senior Standing & Department Permission,CIS 400. Internship in Computer Information Systems.,5,Yellow
+Junior Standing & Department Permission,CIS 400. Internship in Computer Information Systems.,5,Yellow
 Department Permission,CIS 410. Special Topics,5,Yellow
 CIS 231. Management Information Systems,CIS 420. Integrative Project Management,10,Red
 Senior Standing,CIS 420. Integrative Project Management,5,Yellow
@@ -29,3 +29,34 @@ Department Permission,CIS 485. Special Problems in Business Information Processi
 Senior Standing & Department Permission,CIS 490. Independent Study in Information Systems,5,Yellow
 Admission to the MBA program,CIS 501. Information Systems for Managers,5,Yellow
 OIS-200,QBA-283,5,Yellow
+College of Business,Accounting,20,Yellow
+Accounting,ACCT 205. Introduction to Financial Accounting,15,Red
+Math-101,ACCT 205. Introduction to Financial Accounting,5,Yellow
+College of Business,Computer Information System,20,
+Computer Information System,CIS 150. Visual Computer Programming for Business,15,
+ACCT 205. Introduction to Financial Accounting,ACCT 206. Introduction to Managerial Accounting,10,
+ACCT 205. Introduction to Financial Accounting,ACCT 306. Cost Accounting,10,
+ACCT 205. Introduction to Financial Accounting,ACCT 321. Intermediate Financial Accounting I,10,
+ACCT 321. Intermediate Financial Accounting I,ACCT 315. Governmental and Not for Profit Accounting,10,
+ACCT 321. Intermediate Financial Accounting I,ACCT 322. Intermediate Financial Accounting II,10,
+ACCT 322. Intermediate Financial Accounting II,ACCT 323. Intermediate Financial Accounting III,10,
+CIS 231. Management Information Systems,ACCT 351. Accounting Information Systems,10,
+ACCT 321. Intermediate Financial Accounting I,ACCT 351. Accounting Information Systems,10,
+ACCT 323. Intermediate Financial Accounting III,ACCT 401. Advanced Accounting,10,
+Junior Standing & Department Permission,ACCT 402. Accounting Internship,10,
+ACCT 322. Intermediate Financial Accounting II,ACCT 403. Auditing,10,
+ACCT 403. Auditing,ACCT 406. Advanced Auditing,10,
+ACCT 205. Introduction to Financial Accounting,ACCT 407. Income Tax Accounting,10,
+54 hours of Non-Developmental Coursework,ACCT 407. Income Tax Accounting,5,
+ACCT 205. Introduction to Financial Accounting,ACCT 408. Advanced Income Tax Accounting,10,
+ACCT 407. Income Tax Accounting,ACCT 408. Advanced Income Tax Accounting,10,
+ACCT 206. Introduction to Managerial Accounting,ACCT 409. Business Taxation,10,
+Department Permission,ACCT 485. Special Topics in Accounting,10,
+ACCT 206. Introduction to Managerial Accounting,ACCT 500. Managerial Decision Support,10,
+College of Business,Finance,20,
+Finance,FINC 302. Financial Management,15,
+ACCT 206. Introduction to Managerial Accounting,FINC 302. Financial Management,10,
+ECON 211. Principles of Microeconomics,FINC 302. Financial Management,10,
+ECON 212. Principles of Macroeconomics,FINC 302. Financial Management,10,
+QBA-282,FINC 302. Financial Management,5,
+54 hours of Non-Developmental Coursework,FINC 302. Financial Management,5,
