@@ -1,0 +1,113 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%abs;
+            background-color: #222222;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "red", "font": {"color": "white"}, "id": "Math-101", "label": "Math-101", "shape": "star", "title": "Math-101"}, {"font": {"color": "white"}, "id": "CIS 150. Visual Computer Programming for Business", "label": "CIS 150. Visual Computer Programming for Business", "shape": "dot", "title": "CIS 150. Visual Computer Programming for Business"}, {"color": "red", "font": {"color": "white"}, "id": "CMPS-101", "label": "CMPS-101", "shape": "star", "title": "CMPS-101"}, {"font": {"color": "white"}, "id": "CIS 231. Management Information Systems", "label": "CIS 231. Management Information Systems", "shape": "dot", "title": "CIS 231. Management Information Systems"}, {"color": "red", "font": {"color": "white"}, "id": "OIS-200", "label": "OIS-200", "shape": "star", "title": "OIS-200"}, {"font": {"color": "white"}, "id": "CIS 255. Programming for Business Applications", "label": "CIS 255. Programming for Business Applications", "shape": "dot", "title": "CIS 255. Programming for Business Applications"}, {"font": {"color": "white"}, "id": "CIS 310. Data Communications", "label": "CIS 310. Data Communications", "shape": "dot", "title": "CIS 310. Data Communications"}, {"font": {"color": "white"}, "id": "CIS 315. Advanced Networking and Telecommunications", "label": "CIS 315. Advanced Networking and Telecommunications", "shape": "dot", "title": "CIS 315. Advanced Networking and Telecommunications"}, {"font": {"color": "white"}, "id": "CIS 320. Applied Database Development", "label": "CIS 320. Applied Database Development", "shape": "dot", "title": "CIS 320. Applied Database Development"}, {"font": {"color": "white"}, "id": "CIS 330. Systems Analysis and Design", "label": "CIS 330. Systems Analysis and Design", "shape": "dot", "title": "CIS 330. Systems Analysis and Design"}, {"font": {"color": "white"}, "id": "CIS 340. Electronic Commerce: Business Uses of the Internet", "label": "CIS 340. Electronic Commerce: Business Uses of the Internet", "shape": "dot", "title": "CIS 340. Electronic Commerce: Business Uses of the Internet"}, {"color": "red", "font": {"color": "white"}, "id": "MNGT-301", "label": "MNGT-301", "shape": "star", "title": "MNGT-301"}, {"color": "red", "font": {"color": "white"}, "id": "MKTG-300", "label": "MKTG-300", "shape": "star", "title": "MKTG-300"}, {"font": {"color": "white"}, "id": "CIS 355. Advanced Programming and Data Structures", "label": "CIS 355. Advanced Programming and Data Structures", "shape": "dot", "title": "CIS 355. Advanced Programming and Data Structures"}, {"color": "red", "font": {"color": "white"}, "id": "QBA-283", "label": "QBA-283", "shape": "star", "title": "QBA-283"}, {"font": {"color": "white"}, "id": "CIS 370. Data Analytics", "label": "CIS 370. Data Analytics", "shape": "dot", "title": "CIS 370. Data Analytics"}, {"color": "red", "font": {"color": "white"}, "id": "QBA-282", "label": "QBA-282", "shape": "star", "title": "QBA-282"}, {"color": "red", "font": {"color": "white"}, "id": "Senior Standing \u0026 Department Permission", "label": "Senior Standing \u0026 Department Permission", "shape": "star", "title": "Senior Standing \u0026 Department Permission"}, {"font": {"color": "white"}, "id": "CIS 400. Internship in Computer Information Systems.", "label": "CIS 400. Internship in Computer Information Systems.", "shape": "dot", "title": "CIS 400. Internship in Computer Information Systems."}, {"color": "red", "font": {"color": "white"}, "id": "Department Permission", "label": "Department Permission", "shape": "star", "title": "Department Permission"}, {"font": {"color": "white"}, "id": "CIS 410. Special Topics", "label": "CIS 410. Special Topics", "shape": "dot", "title": "CIS 410. Special Topics"}, {"font": {"color": "white"}, "id": "CIS 420. Integrative Project Management", "label": "CIS 420. Integrative Project Management", "shape": "dot", "title": "CIS 420. Integrative Project Management"}, {"color": "red", "font": {"color": "white"}, "id": "Senior Standing", "label": "Senior Standing", "shape": "star", "title": "Senior Standing"}, {"font": {"color": "white"}, "id": "CIS 430. Information Technology Service Management", "label": "CIS 430. Information Technology Service Management", "shape": "dot", "title": "CIS 430. Information Technology Service Management"}, {"font": {"color": "white"}, "id": "CIS 435. Data Warehousing and Business Intelligence", "label": "CIS 435. Data Warehousing and Business Intelligence", "shape": "dot", "title": "CIS 435. Data Warehousing and Business Intelligence"}, {"font": {"color": "white"}, "id": "CIS 455. Integrated Web Development and e-Business", "label": "CIS 455. Integrated Web Development and e-Business", "shape": "dot", "title": "CIS 455. Integrated Web Development and e-Business"}, {"font": {"color": "white"}, "id": "CIS 460. Management of Information Systems", "label": "CIS 460. Management of Information Systems", "shape": "dot", "title": "CIS 460. Management of Information Systems"}, {"font": {"color": "white"}, "id": "CIS 480. Practical Business Information Processing", "label": "CIS 480. Practical Business Information Processing", "shape": "dot", "title": "CIS 480. Practical Business Information Processing"}, {"font": {"color": "white"}, "id": "CIS 485. Special Problems in Business Information Processing", "label": "CIS 485. Special Problems in Business Information Processing", "shape": "dot", "title": "CIS 485. Special Problems in Business Information Processing"}, {"font": {"color": "white"}, "id": "CIS 490. Independent Study in Information Systems", "label": "CIS 490. Independent Study in Information Systems", "shape": "dot", "title": "CIS 490. Independent Study in Information Systems"}, {"color": "red", "font": {"color": "white"}, "id": "Admission to the MBA program", "label": "Admission to the MBA program", "shape": "star", "title": "Admission to the MBA program"}, {"font": {"color": "white"}, "id": "CIS 501. Information Systems for Managers", "label": "CIS 501. Information Systems for Managers", "shape": "dot", "title": "CIS 501. Information Systems for Managers"}]);
+        edges = new vis.DataSet([{"arrows": "to", "from": "Math-101", "to": "CIS 150. Visual Computer Programming for Business", "value": 5}, {"arrows": "to", "from": "CMPS-101", "to": "CIS 231. Management Information Systems", "value": 5}, {"arrows": "to", "from": "OIS-200", "to": "CIS 231. Management Information Systems", "value": 5}, {"arrows": "to", "from": "CIS 150. Visual Computer Programming for Business", "to": "CIS 255. Programming for Business Applications", "value": 10}, {"arrows": "to", "from": "CIS 231. Management Information Systems", "to": "CIS 310. Data Communications", "value": 10}, {"arrows": "to", "from": "CIS 150. Visual Computer Programming for Business", "to": "CIS 310. Data Communications", "value": 10}, {"arrows": "to", "from": "CIS 310. Data Communications", "to": "CIS 315. Advanced Networking and Telecommunications", "value": 10}, {"arrows": "to", "from": "CIS 231. Management Information Systems", "to": "CIS 320. Applied Database Development", "value": 10}, {"arrows": "to", "from": "CIS 320. Applied Database Development", "to": "CIS 330. Systems Analysis and Design", "value": 10}, {"arrows": "to", "from": "CIS 231. Management Information Systems", "to": "CIS 340. Electronic Commerce: Business Uses of the Internet", "value": 10}, {"arrows": "to", "from": "MNGT-301", "to": "CIS 340. Electronic Commerce: Business Uses of the Internet", "value": 5}, {"arrows": "to", "from": "MKTG-300", "to": "CIS 340. Electronic Commerce: Business Uses of the Internet", "value": 5}, {"arrows": "to", "from": "CIS 150. Visual Computer Programming for Business", "to": "CIS 355. Advanced Programming and Data Structures", "value": 10}, {"arrows": "to", "from": "QBA-283", "to": "CIS 370. Data Analytics", "value": 5}, {"arrows": "to", "from": "QBA-282", "to": "QBA-283", "value": 5}, {"arrows": "to", "from": "Senior Standing \u0026 Department Permission", "to": "CIS 400. Internship in Computer Information Systems.", "value": 5}, {"arrows": "to", "from": "Department Permission", "to": "CIS 410. Special Topics", "value": 5}, {"arrows": "to", "from": "CIS 231. Management Information Systems", "to": "CIS 420. Integrative Project Management", "value": 10}, {"arrows": "to", "from": "Senior Standing", "to": "CIS 420. Integrative Project Management", "value": 5}, {"arrows": "to", "from": "CIS 330. Systems Analysis and Design", "to": "CIS 430. Information Technology Service Management", "value": 10}, {"arrows": "to", "from": "CIS 320. Applied Database Development", "to": "CIS 435. Data Warehousing and Business Intelligence", "value": 10}, {"arrows": "to", "from": "CIS 255. Programming for Business Applications", "to": "CIS 455. Integrated Web Development and e-Business", "value": 10}, {"arrows": "to", "from": "CIS 320. Applied Database Development", "to": "CIS 455. Integrated Web Development and e-Business", "value": 10}, {"arrows": "to", "from": "MNGT-301", "to": "CIS 460. Management of Information Systems", "value": 5}, {"arrows": "to", "from": "CIS 231. Management Information Systems", "to": "CIS 460. Management of Information Systems", "value": 10}, {"arrows": "to", "from": "CIS 231. Management Information Systems", "to": "CIS 480. Practical Business Information Processing", "value": 10}, {"arrows": "to", "from": "Department Permission", "to": "CIS 485. Special Problems in Business Information Processing", "value": 5}, {"arrows": "to", "from": "Senior Standing \u0026 Department Permission", "to": "CIS 490. Independent Study in Information Systems", "value": 5}, {"arrows": "to", "from": "Admission to the MBA program", "to": "CIS 501. Information Systems for Managers", "value": 5}, {"arrows": "to", "from": "OIS-200", "to": "QBA-283", "value": 5}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -80000,
+            "springConstant": 0.001,
+            "springLength": 150
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
